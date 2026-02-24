@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Kitty Vibes</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- MENU FOFO -->
+    <nav class="nav card">
+      <a class="brand" href="#topo">Giovanna 🌸</a>
+
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#skills">Skills</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+
+    <!-- TOPO -->
+    <header class="card" id="topo">
+      <h1>Giovanna 🌸</h1>
+      <p>Bem-vinda(o) ao meu cantinho fofo da web 🐱💗</p>
+
+      <div class="actions">
+        <a class="btn" href="#projetos">Ver projetos</a>
+        <a class="btn btn-outline" href="#contato">Contato</a>
+      </div>
+    </header>
+
+    <!-- HERO: ESQUERDA (conteúdo) + DIREITA (kitty) -->
+    <main class="hero">
+      <div class="left">
+
+        <section class="card" id="sobre">
+          <h2>✨ Sobre mim</h2>
+          <p>Eu estou aprendendo a criar sites com HTML + CSS e vou virar dev 💻</p>
+        </section>
+
+        <section class="card">
+          <h2>🎀 O que eu gosto</h2>
+          <ul>
+            <li>Jogos</li>
+            <li>Séries</li>
+            <li>Design fofinho</li>
+            <li>Aprender programação</li>
+          </ul>
+        </section>
+
+        <section class="card" id="links">
+          <h2>🔗 Me encontra aqui</h2>
+          <div class="links">
+            <a class="link" href="https://github.com/" target="_blank">GitHub</a>
+            <a class="link" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a class="link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="right">
+        <img class="kitty" src="assets/hello-kitty.gif" alt="Hello Kitty fofinha" />
+      </div>
+    </main>
+
+    <!-- PROJETOS -->
+    <section class="card section" id="projetos">
+      <h2>💻 Projetos</h2>
+      <p class="muted">Alguns projetos que eu já fiz (ou estou fazendo) ✨</p>
+
+<article class="project">s
+
+  <h3>🌸 Hello Kitty Site</h3>
+  <p>Meu site fofinho feito com HTML + CSS.</p>
+
+  <div class="tags">
+    <span>HTML</span><span>CSS</span>
+  </div>
+
+  <div class="project-actions">
+    <a class="mini-btn" href="#">Ver online</a>
+    <a class="mini-btn mini-outline" href="#">Código</a>
+  </div>
+</article>
+
+        <article class="project">
+          <h3>🎮 Lista de Games</h3>
+          <p>Uma página com cards e links para jogos.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span>
+          </div>
+          <div class="project-actions">
+            <a class="mini-btn" href="#" target="_blank">Ver online</a>
+            <a class="mini-btn mini-outline" href="#" target="_blank">Código</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>🧩 Em construção</h3>
+          <p>Próximo projeto: portfólio profissional ✨</p>
+          <div class="tags">
+            <span>Planejamento</span>
+          </div>
+          <div class="project-actions">
+            <a class="mini-btn" href="#contato">Falar comigo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="card section" id="skills">
+      <h2>🛠️ Skills / Tecnologias</h2>
+      <p class="muted">O que eu estou estudando agora:</p>
+
+      <div class="chips">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">Git/GitHub</span>
+        <span class="chip">Lógica</span>
+        <span class="chip">JavaScript (em breve)</span>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="card section" id="contato">
+      <h2>📩 Contato</h2>
+      <p class="muted">Quer falar comigo? Clica pra copiar meu e-mail:</p>
+
+      <div class="contact-row">
+        <input id="email" class="email" value="giovannaminh@gmail.com" readonly />
+        <button class="copy" onclick="copiarEmail()">Copiar</button>
+      </div>
+
+      <p class="tiny" id="msg"></p>
+    </section>
+
+    <footer class="footer">
+      <p>Feito com 💗 por Giovanna • 2026</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function copiarEmail() {
+      const input = document.getElementById("email");
+      const msg = document.getElementById("msg");
+      input.select();
+      input.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(input.value);
+      msg.textContent = "E-mail copiado! 💗";
+      setTimeout(() => msg.textContent = "", 2000);
+    }
+  </script>
+</body>
+</html>
